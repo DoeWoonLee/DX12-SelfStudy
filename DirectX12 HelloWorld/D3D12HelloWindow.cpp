@@ -50,7 +50,7 @@ void D3D12HelloWindow::LoadPipeline()
 			IID_PPV_ARGS(&m_device)
 		));
 	}
-	else
+	else // 그래픽 카드 일 때
 	{
 		ComPtr<IDXGIAdapter1> hardwareAdapter;
 		GetHardwareAdapter(factory.Get(), &hardwareAdapter); // Create Adpater
@@ -92,6 +92,7 @@ void D3D12HelloWindow::LoadPipeline()
 	// This sample does not support fullscreen transitions.
 	ThrowIfFailed(factory->MakeWindowAssociation(Win32Application::GetHwnd(), DXGI_MWA_NO_ALT_ENTER));
 
+	// Dependency injection
 	ThrowIfFailed(swapChain.As(&m_swapChain));
 	m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
 
@@ -117,7 +118,8 @@ void D3D12HelloWindow::LoadPipeline()
 		{
 			ThrowIfFailed(m_swapChain->GetBuffer(n, IID_PPV_ARGS(&m_renderTargets[n])));
 			m_device->CreateRenderTargetView(m_renderTargets[n].Get(), nullptr, rtvHandle);
-			rtvHandle.Offset(1, m_rtvDescriptorSize);
+			
+			rtvHandle.Offset(1/* Count */, m_rtvDescriptorSize);
 		}
 	}
 

@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WinMain.cpp">
+    <ClCompile Include="D3D12HelloTriangle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DXSample.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -24,36 +27,28 @@
     <ClCompile Include="Win32Application.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="D3D12HelloWindow.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DXSample.cpp">
+    <ClCompile Include="WinMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="d3dx12.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Win32Application.h">
+    <ClInclude Include="D3D12HelloTriangle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DXSamplerHelper.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="D3D12HelloWindow.h">
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32Application.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DXSample.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Readme.md">
-      <Filter>헤더 파일</Filter>
-    </None>
   </ItemGroup>
 </Project>
