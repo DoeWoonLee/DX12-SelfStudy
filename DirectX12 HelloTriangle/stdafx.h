@@ -4,8 +4,8 @@
 #define WIN32_LEAN_AND_MEAN
 #endif
 
-#define UNICODE
-#define _UNICODE
+//#define UNICODE
+//#define _UNICODE
 
 
 
