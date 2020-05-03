@@ -1,5 +1,8 @@
 #pragma once
 #include "DXSample.h"
+
+using namespace DirectX;
+
 class D3D12HelloTriangle :
 	public DXSample
 {
@@ -14,6 +17,12 @@ public:
 private:
 	static const UINT FrameCount = 2;
 
+	struct Vertex
+	{
+		XMFLOAT3 position;
+		XMFLOAT4 color;
+	};
+
 	// Pipeline objects.
 	ComPtr<IDXGISwapChain3> m_swapChain;
 	ComPtr<ID3D12Device> m_device;
@@ -24,6 +33,13 @@ private:
 	ComPtr<ID3D12PipelineState> m_pipelineState;
 	ComPtr<ID3D12GraphicsCommandList> m_commandList;
 	UINT m_rtvDescriptorSize;
+
+	ComPtr<ID3D12RootSignature> m_rootSignature;
+
+	// App Resources
+	ComPtr<ID3D12Resource> m_vertexBuffer;
+	D3D12_VERTEX_BUFFER_VIEW m_vertexBufferView;
+
 
 	// Synchronization objects.
 	UINT m_frameIndex;

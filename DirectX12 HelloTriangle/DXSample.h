@@ -3,6 +3,7 @@
 #include "DXSamplerHelper.h"
 //#include "Win32Application.h"
 
+
 class DXSample
 {
 public:
